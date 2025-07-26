@@ -1,0 +1,195 @@
+/* Reset și stil de bază */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #26B689;
+  color: white;
+  padding: 1em 2em;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 50px;
+}
+
+.logo-container h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.logo-container h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo-container h1 a:hover {
+  text-decoration: underline;
+}
+
+/* Navigație */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3em 0.5em;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero */
+.hero {
+  background-color: #e6f4f1;
+  padding: 4em 2em;
+  text-align: center;
+  max-width: 900px;
+  margin: 2em auto;
+  border-radius: 8px;
+}
+
+.hero h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  color: #1f5e51;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #3a7a6b;
+}
+
+/* Buton Donează Acum */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1em 2em;
+  background: #26B689;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(38, 182, 137, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.1em;
+}
+
+.btn:hover {
+  background-color: #1e8a6a;
+  transform: scale(1.05);
+}
+
+.btn img.icon {
+  height: 20px;
+  width: auto;
+}
+
+/* Proiecte */
+.proiecte {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+.proiecte h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #26B689;
+}
+
+.grid {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 2em;
+  flex: 1 1 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+footer strong {
+  font-weight: 700;
+}
+
+.logo-container a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.logo-container a:hover {
+  text-decoration: none;
+  transform: none;
+}
