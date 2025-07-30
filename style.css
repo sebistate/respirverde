@@ -4,14 +4,8 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -24,6 +18,16 @@ header {
   background-color: #26B689;
   color: white;
   padding: 1em 2em;
+}
+
+/* Bara galbenă de notificare */
+.notification-bar {
+  background-color: #ffcc00; /* Galben */
+  color: #333;               /* Text întunecat pentru contrast */
+  text-align: center;        /* Centrare text */
+  padding: 10px;             /* Spațiu pe toate laturile */
+  font-size: 16px;           /* Dimensiune text */
+  font-weight: bold;         /* Text îngroșat */
 }
 
 .header-top {
@@ -46,7 +50,7 @@ header {
 
 .logo-container h1 {
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .logo-container h1 a {
@@ -186,10 +190,52 @@ footer strong {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: white;
+  color: white; 
 }
 
 .logo-container a:hover {
   text-decoration: none;
   transform: none;
+}
+
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
+.follow-us {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+}
+
+.follow-us-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.follow-us h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 0;
+  color: #2c2c2c;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
 }
