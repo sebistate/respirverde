@@ -4,6 +4,39 @@ html, body {
   margin: 0;
   padding: 0;
 }
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #26B689;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  z-index: 9999;
+}
+
+#cookie-banner.show {
+  display: block;
+  opacity: 1;
+}
+
+#cookie-banner button {
+  margin-left: 12px;
+  background-color: #fff;
+  color: #2e7d32;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
