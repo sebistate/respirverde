@@ -1,66 +1,28 @@
-/* Reset și stil de bază */
+/* ===== RESET & STRUCTURĂ DE BAZĂ ===== */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-#cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #26B689;
-  color: white;
   font-family: 'Poppins', sans-serif;
-  padding: 15px;
-  text-align: center;
-  display: none;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  z-index: 9999;
-}
-
-#cookie-banner.show {
-  display: block;
-  opacity: 1;
-}
-
-#cookie-banner button {
-  margin-left: 12px;
-  background-color: #fff;
-  color: #2e7d32;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header */
+@media (max-width: 768px) {
+    /* Stiluri pentru ecrane mai mici, cum ar fi telefoanele */
+    body {
+        font-size: 16px;
+    }
+}
+
+/* ===== HEADER ===== */
 header {
   background-color: #26B689;
   color: white;
   padding: 1em 2em;
-}
-
-/* Bara galbenă de notificare */
-.notification-bar {
-  background-color: #ffcc00; /* Galben */
-  color: #333;               /* Text întunecat pentru contrast */
-  text-align: center;        /* Centrare text */
-  padding: 10px;             /* Spațiu pe toate laturile */
-  font-size: 16px;           /* Dimensiune text */
-  font-weight: bold;         /* Text îngroșat */
 }
 
 .header-top {
@@ -86,16 +48,19 @@ header {
   font-size: 1.6em;
 }
 
-.logo-container h1 a {
+.logo-container a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: white;
+}
+
+.logo-container a:hover {
   text-decoration: none;
 }
 
-.logo-container h1 a:hover {
-  text-decoration: underline;
-}
-
-/* Navigație */
+/* ===== NAVIGAȚIE ===== */
 nav ul {
   list-style: none;
   display: flex;
@@ -109,15 +74,25 @@ nav ul li a {
   text-decoration: none;
   font-weight: 600;
   padding: 0.3em 0.5em;
-  transition: background-color 0.3s ease;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hero */
+/* ===== NOTIFICARE ÎN LUCRU ===== */
+.notification-bar {
+  background-color: #ffcc00;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ===== SECȚIUNE HERO ===== */
 .hero {
   background-color: #e6f4f1;
   padding: 4em 2em;
@@ -139,7 +114,6 @@ nav ul li a:hover {
   color: #3a7a6b;
 }
 
-/* Buton Donează Acum */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -165,7 +139,7 @@ nav ul li a:hover {
   width: auto;
 }
 
-/* Proiecte */
+/* ===== PROIECTE ===== */
 .proiecte {
   max-width: 1200px;
   margin: 2em auto;
@@ -181,60 +155,30 @@ nav ul li a:hover {
 
 .grid {
   display: flex;
-  gap: 1.5em;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #fff;
-  padding: 2em;
-  flex: 1 1 250px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 16px;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
   font-weight: 600;
   color: #333;
 }
 
-/* Footer */
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 1.5em 1em;
-  font-size: 0.9em;
+.card img.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-footer p {
-  margin: 0;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.4;
-}
-
-footer strong {
-  font-weight: 700;
-}
-
-.logo-container a {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: white; 
-}
-
-.logo-container a:hover {
-  text-decoration: none;
-  transform: none;
-}
-
-a[href^="tel"] {
-  color: inherit;
-  text-decoration: none;
-}
+/* ===== FOLLOW US ===== */
 .follow-us {
   padding: 40px 20px;
   background-color: #f0f0f0;
@@ -271,4 +215,49 @@ a[href^="tel"] {
 
 .social-links a img:hover {
   transform: scale(1.1);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1.5em 1em;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+footer strong {
+  font-weight: 700;
+}
+
+/* ===== COOKIE BANNER ===== */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #26B689;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px;
+  text-align: center;
+  display: none; /* Eliminăm efectul de display și opacity */
+  z-index: 9999;
+}
+
+#cookie-banner.show {
+  display: block; /* Afișăm banner-ul fără tranziție */
+}
+
+/* Înlăturăm efectul de fade-in */
+.js-loading #cookie-banner {
+  display: none !important;
 }

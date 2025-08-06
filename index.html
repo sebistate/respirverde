@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Respir Verde</title>
- <meta name="description" content="Respir Verde - Implică-te pentru un aer mai curat! Proiecte de ecologizare, reciclare și plantare de copaci în România.">
-
-  <!-- Cuvinte cheie relevante -->
+  <meta name="description" content="Respir Verde - Implică-te pentru un aer mai curat! Proiecte de ecologizare, reciclare și plantare de copaci în România.">
   <meta name="keywords" content="ecologie, reciclare, plantare copaci, mediu curat, aer curat, proiecte ecologice, Respir Verde, Suceava">
-
-  <!-- Autorul site-ului -->
   <meta name="author" content="Respir Verde">
 
-  <!-- Link-uri către fonturi și CSS (așa cum ai deja) -->
+  <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css"> <!-- Asigură-te că stilul este încărcat -->
 </head>
-<body>
+<body class="js-loading"> <!-- Clasa js-loading este aplicată la început pentru a ascunde pagina -->
+
+  <!-- HEADER -->
   <header>
-	  <div class="header-top">
-	    <div class="logo-container">
-<a href="https://respirverde.ro" class="logo-link">
-  <div class="logo-container">
-    <img src="logo.png" alt="Logo Respir Verde">
-    <h1>Respir Verde</h1>
-  </div>
-</a>
-	</div>
-    <nav>
-      <ul>
-	<li><a href="index.html">Acasă</a></li>
-	<li><a href="despre.html">Despre Noi</a></li>
-	<li><a href="proiecte.html">Proiecte</a></li>
-	<li><a href="doneaza.html">Donează</a></li>
-	<li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-top">
+      <div class="logo-container">
+        <a href="https://respirverde.ro" class="logo-link">
+          <div class="logo-container">
+            <img src="logo.png" alt="Logo Respir Verde">
+            <h1>Respir Verde</h1>
+          </div>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="despre.html">Despre Noi</a></li>
+          <li><a href="proiecte.html">Proiecte</a></li>
+          <li><a href="doneaza.html">Donează</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Bara galbenă de notificare -->
@@ -48,78 +44,100 @@
     ⚠️ Acest site este încă în lucru. Unele secțiuni ar putea să nu fie complet funcționale.
   </div>
 
+  <!-- HERO -->
   <section class="hero">
     <h2>Pentru ca generațiile viitoare să respire un aer mai curat.</h2>
     <p>Implică-te și tu în misiunea noastră!</p>
     <a href="https://www.paypal.me/" class="btn" target="_blank" rel="noopener">
-  <img src="icon.png" alt="Iconiță donație" class="icon">
-  Donează Acum
-</a>
+      <img src="icon.png" alt="Iconiță donație" class="icon">
+      Donează Acum
+    </a>
   </section>
 
+  <!-- PROIECTELE NOASTRE -->
   <section class="proiecte">
     <h2>Proiectele Noastre</h2>
     <div class="grid">
-      <div class="card">Activități de ecologizare</div>
-      <div class="card">Reciclare</div>
-      <div class="card">Plantare de copaci</div>
+      <div class="card">
+        <img src="images/e.png" alt="Ecologizare" class="card-image">
+        <p>Activități de ecologizare</p>
+      </div>
+      <div class="card">
+        <img src="images/e.png" alt="Reciclare" class="card-image">
+        <p>Reciclare</p>
+      </div>
+      <div class="card">
+        <img src="images/e.png" alt="Plantare de copaci" class="card-image">
+        <p>Plantare de copaci</p>
+      </div>
     </div>
   </section>
-<section class="follow-us">
-  <div class="follow-us-container">
-    <h3>Urmărește-ne pe:</h3>
-    <div class="social-links">
-      <a href="https://instagram.com/respirverde" target="_blank" rel="noopener">
-        <img src="icons/instagram.svg" alt="Instagram">
-      </a>
-      <a href="https://discord.gg/t3sA7vGxTd" target="_blank" rel="noopener">
-        <img src="icons/discord.svg" alt="Discord">
-      </a>
-      <a href="https://youtube.com" target="_blank" rel="noopener">
-        <img src="icons/youtube.svg" alt="YouTube">
-      </a>
+
+  <!-- URMĂREȘTE-NE -->
+  <section class="follow-us">
+    <div class="follow-us-container">
+      <h3>Urmărește-ne pe:</h3>
+      <div class="social-links">
+        <a href="https://instagram.com/respirverde" target="_blank" rel="noopener">
+          <img src="icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">
+          <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://discord.gg/t3sA7vGxTd" target="_blank" rel="noopener">
+          <img src="icons/discord.svg" alt="Discord">
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener">
+          <img src="icons/youtube.svg" alt="YouTube">
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- FOOTER -->
   <footer>
-	<p><strong>Adresa:</strong> Strada Oituz nr. 22, Suceava, 720201, România. 
-	<strong>Telefon:</strong> +40 756941230 
-	<strong>Email:</strong> secretariat@respirverde.ro</p>
-
+    <p><strong>Adresa:</strong> Strada Oituz nr. 22, Suceava, 720201, România. 
+      <strong>Telefon:</strong> +40 756941230 
+      <strong>Email:</strong> secretariat@respirverde.ro
+    </p>
   </footer>
-<div id="cookie-banner">
-  <span>Folosim cookies pentru a îmbunătăți experiența ta pe site.</span>
-  <button id="accept-cookies" style="
-    margin-left: 12px;
-    background-color: #fff;
-    color: #2e7d32;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-  ">Accept</button>
-</div>
 
-<!-- Scriptul de cookies -->
-<script>
-  window.addEventListener("DOMContentLoaded", function () {
-    const banner = document.getElementById("cookie-banner");
-    const acceptBtn = document.getElementById("accept-cookies");
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner">
+    <span>Folosim cookies pentru a îmbunătăți experiența ta pe site.</span>
+    <button id="accept-cookies" style="
+      margin-left: 12px;
+      background-color: #fff;
+      color: #2e7d32;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    ">Accept</button>
+  </div>
 
-    if (!localStorage.getItem("cookiesAccepted")) {
-      banner.classList.add("show");
-    }
+  <!-- Scriptul de cookies -->
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
 
-    acceptBtn.addEventListener("click", function () {
-      localStorage.setItem("cookiesAccepted", "true");
-      banner.classList.remove("show");
+      if (!localStorage.getItem("cookiesAccepted")) {
+        banner.classList.add("show");
+      }
+
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner.classList.remove("show");
+      });
+
+      // Eliminăm efectul de fade-in
+      document.body.classList.remove("js-loading"); // Eliminăm clasa js-loading
+      // Nu adăugăm nimic în locul clasei fade-in, deci pagina va apărea normal
     });
-  });
-</script>
-</body>
+  </script>
 
 </body>
 </html>
