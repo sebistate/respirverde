@@ -9,8 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body class="js-loading">
   <!-- Header -->
   <header>
     <div class="header-top">
@@ -20,53 +20,64 @@
           <h1>Respir Verde</h1>
         </a>
       </div>
-      <nav>
-        <ul>
-	<li><a href="index.html">Acasă</a></li>
-	<li><a href="despre.html">Despre Noi</a></li>
-	<li><a href="proiecte.html">Proiecte</a></li>
-	<li><a href="doneaza.html">Donează</a></li>
-	<li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Acasă</a></li>
+    <li><a href="despre.html">Despre Noi</a></li>
+    <li><a href="proiecte.html">Proiecte</a></li>
+    <li><a href="doneaza.html">Donează</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li>
+      <form class="search-toggle-form" id="searchForm" action="/search" method="GET">
+        <input type="text" name="q" id="searchInput" class="search-input" placeholder="Caută...">
+        <button type="button" class="search-icon" aria-label="Deschide căutarea">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="white">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16a6.471 6.471 0 004.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/>
+          </svg>
+        </button>
+        <button type="submit" class="search-submit">Go</button>
+      </form>
+    </li>
+  </ul>
+</nav>
+
     </div>
   </header>
+
   <!-- Bara galbenă de notificare -->
   <div class="notification-bar">
     ⚠️ Acest site este încă în lucru. Unele secțiuni ar putea să nu fie complet funcționale.
   </div>
+
   <!-- Conținut principal -->
   <main>
     <section class="hero">
       <h2>Contactează-ne</h2>
       <p>Dacă ai întrebări, sugestii sau vrei să te implici, scrie-ne folosind formularul de mai jos.</p>
-    </section>
 
-    <section class="proiecte">
-      <div class="grid" style="justify-content: center;">
-        <div class="card" style="max-width: 600px;">
+      <!-- Formular cu Formsubmit (mutat aici) -->
+      <form action="https://formsubmit.co/secretariat@respirverde.ro" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://respirverde.ro/multumim.html">
+        <input type="text" name="_honey" style="display:none">
 
-          <!-- Formular cu Formsubmit -->
-<form action="https://formsubmit.co/secretariat@respirverde.ro" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://respirverde.ro/multumim.html">
-  <input type="text" name="_honey" style="display:none">
+        <label for="nume">Nume:</label><br>
+        <input type="text" id="nume" name="nume" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
 
-  <label for="nume">Nume:</label><br>
-  <input type="text" id="nume" name="nume" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+        <label for="mesaj">Mesaj:</label><br>
+        <textarea id="mesaj" name="mesaj" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
 
-  <label for="mesaj">Mesaj:</label><br>
-  <textarea id="mesaj" name="mesaj" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
+        <!-- Casetă de bifat pentru politica de confidențialitate -->
+        <label>
+          <input type="checkbox" name="privacy" required>
+          Sunt de acord cu <a href="cookies.html" target="_blank" style="color: #ffa656; text-decoration: none;">Politica de confidențialitate</a>.
+        </label><br>
 
-  <button type="submit" class="btn">Trimite Mesajul</button>
-</form>
-
-
-        </div>
-      </div>
+        <button type="submit" class="btn">Trimite Mesajul</button>
+      </form>
     </section>
 
     <section class="proiecte">
@@ -82,6 +93,7 @@
       </div>
     </section>
   </main>
+
   <!-- URMĂREȘTE-NE -->
   <section class="follow-us">
     <div class="follow-us-container">
@@ -90,7 +102,7 @@
         <a href="https://instagram.com/respirverde" target="_blank" rel="noopener">
           <img src="icons/instagram.svg" alt="Instagram">
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener">
+        <a href="https://www.facebook.com/profile.php?id=61579107452921" target="_blank" rel="noopener">
           <img src="icons/facebook.svg" alt="Facebook">
         </a>
         <a href="https://discord.gg/t3sA7vGxTd" target="_blank" rel="noopener">
@@ -102,6 +114,7 @@
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer>
     <p><strong>Adresa:</strong> Strada Oituz nr. 22, Suceava, 720201, România. 
@@ -109,5 +122,56 @@
     <strong>Email:</strong> secretariat@respirverde.ro</p>
   </footer>
 
+  <!-- Script de căutare -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".search-toggle-form");
+      const iconBtn = form.querySelector(".search-icon");
+      const input = form.querySelector(".search-input");
+
+      // Ascultă clicul pe iconiță
+      iconBtn.addEventListener("click", function () {
+        form.classList.toggle("open");
+        if (form.classList.contains("open")) {
+          input.focus();
+        }
+      });
+
+      // Închide bara de căutare dacă se pierde focusul
+      input.addEventListener("blur", function () {
+        setTimeout(() => form.classList.remove("open"), 200);
+      });
+
+      // Ascultă trimiterea formularului pentru căutare
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Previne trimiterea formularului
+
+        const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+        const content = document.getElementById('content');
+        const paragraphs = content.getElementsByTagName('p');
+        let found = false;
+        const searchResults = document.createElement('div');
+        
+        // Căutăm termenul introdus în conținut
+        Array.from(paragraphs).forEach(paragraph => {
+          if (paragraph.textContent.toLowerCase().includes(searchQuery)) {
+            found = true;
+            const result = document.createElement('div');
+            result.textContent = 'Rezultate găsite: ' + paragraph.textContent;
+            searchResults.appendChild(result);
+          }
+        });
+
+        if (!found) {
+          searchResults.textContent = 'Nu s-au găsit rezultate.';
+        }
+
+        // Afișăm rezultatele căutării
+        document.body.appendChild(searchResults);
+      });
+    });
+  </script>
+
+<script src="script.js"></script>
 </body>
 </html>
