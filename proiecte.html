@@ -23,11 +23,22 @@
       </div>
       <nav>
         <ul>
-	<li><a href="index.html">Acasă</a></li>
-	<li><a href="despre.html">Despre Noi</a></li>
-	<li><a href="proiecte.html">Proiecte</a></li>
-	<li><a href="doneaza.html">Donează</a></li>
-	<li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="despre.html">Despre Noi</a></li>
+          <li><a href="proiecte.html">Proiecte</a></li>
+          <li><a href="doneaza.html">Donează</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    <li>
+      <form class="search-toggle-form" id="searchForm" action="/search" method="GET">
+        <input type="text" name="q" id="searchInput" class="search-input" placeholder="Caută...">
+        <button type="button" class="search-icon" aria-label="Deschide căutarea">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 24 24" fill="white">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16a6.471 6.471 0 004.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/>
+          </svg>
+        </button>
+        <button type="submit" class="search-submit">Go</button>
+      </form>
+    </li>
         </ul>
       </nav>
     </div>
@@ -87,6 +98,79 @@
     <strong>Telefon:</strong> +40 756941230 
     <strong>Email:</strong> secretariat@respirverde.ro</p>
   </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner">
+<span>
+  Folosim cookies pentru a îmbunătăți experiența ta pe site.
+  <a href="cookies.html" style="color: #fff; text-decoration: underline; margin-left: 8px;"> Află mai multe.
+  </a>
+</span>
+    <button id="accept-cookies" style="
+      margin-left: 12px;
+      background-color: #fff;
+      color: #2e7d32;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    ">Accept</button>
+  </div>
+
+  <!-- Scriptul de cookies -->
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+
+      if (!localStorage.getItem("cookiesAccepted")) {
+        banner.classList.add("show");
+      }
+
+      acceptBtn.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner.classList.remove("show");
+      });
+
+      // Eliminăm efectul de fade-in
+      document.body.classList.remove("js-loading"); // Eliminăm clasa js-loading
+      // Nu adăugăm nimic în locul clasei fade-in, deci pagina va apărea normal
+    });
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // La încărcare, fă fade-in
+    document.body.classList.add('fade-in');
+    
+    // Ascultă clicul pe linkuri interne pentru a face fade-out
+    document.querySelectorAll("a[href]").forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Ignoră linkurile externe, anchor (#) și cele cu target="_blank"
+      if (
+        href.startsWith("http") || 
+        href.startsWith("#") || 
+        link.getAttribute("target") === "_blank"
+      ) return;
+
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const destination = this.href;
+
+        document.body.classList.remove('fade-in'); // Oprește fade-in înainte de a aplica fade-out
+        document.body.classList.add('fade-out');
+
+        // După 500ms (durata animației), navighează la pagina dorită
+        setTimeout(() => {
+          window.location.href = destination;
+        }, 500); // aceeași durată ca în CSS
+      });
+    });
+  });
+</script>
 
 </body>
 </html>

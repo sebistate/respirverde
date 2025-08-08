@@ -56,6 +56,28 @@
     ⚠️ Acest site este încă în lucru. Unele secțiuni ar putea să nu fie complet funcționale.
   </div>
 
+<!-- POLITICA DE CONFIDENȚIALITATE -->
+<section id="politica-confidentialitate" class="legal-section">
+  <h2>Politica de Confidențialitate</h2>
+  <p>
+    La Respir Verde, ne angajăm să protejăm confidențialitatea vizitatorilor noștri. Informațiile colectate sunt utilizate doar pentru îmbunătățirea serviciilor și comunicarea cu utilizatorii. Nu partajăm datele personale cu terțe părți fără consimțământul tău explicit.
+  </p>
+  <p>
+    Prin utilizarea acestui site, îți exprimi acordul față de această politică. Ai dreptul de a solicita modificarea sau ștergerea datelor tale în orice moment.
+  </p>
+</section>
+
+<!-- TERMENI ȘI CONDIȚII -->
+<section id="termeni-conditii" class="legal-section">
+  <h2>Termeni și Condiții</h2>
+  <p>
+    Utilizarea site-ului Respir Verde implică acceptarea termenilor și condițiilor de mai jos. Conținutul acestui site este destinat exclusiv scopurilor informative și educative. Orice utilizare abuzivă sau copiere fără permisiune este interzisă.
+  </p>
+  <p>
+    Ne rezervăm dreptul de a modifica acești termeni fără o notificare prealabilă. Te încurajăm să verifici periodic această secțiune pentru a fi la curent cu eventualele actualizări.
+  </p>
+</section>
+
   <!-- URMĂREȘTE-NE -->
   <section class="follow-us">
     <div class="follow-us-container">
@@ -172,5 +194,36 @@
     });
   </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // La încărcare, fă fade-in
+    document.body.classList.add('fade-in');
+    
+    // Ascultă clicul pe linkuri interne pentru a face fade-out
+    document.querySelectorAll("a[href]").forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Ignoră linkurile externe, anchor (#) și cele cu target="_blank"
+      if (
+        href.startsWith("http") || 
+        href.startsWith("#") || 
+        link.getAttribute("target") === "_blank"
+      ) return;
+
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const destination = this.href;
+
+        document.body.classList.remove('fade-in'); // Oprește fade-in înainte de a aplica fade-out
+        document.body.classList.add('fade-out');
+
+        // După 500ms (durata animației), navighează la pagina dorită
+        setTimeout(() => {
+          window.location.href = destination;
+        }, 500); // aceeași durată ca în CSS
+      });
+    });
+  });
+</script>
 </body>
 </html>

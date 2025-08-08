@@ -19,9 +19,13 @@ html, body {
 
 /* ===== HEADER ===== */
 header {
+  position: sticky;  /* Fixează header-ul când derulezi */
+  top: 0;  /* Se va fixa la partea de sus a paginii */
   background-color: #26B689;
   color: white;
   padding: 1em 2em;
+  z-index: 1000;  /* Asigură că header-ul va rămâne deasupra altor elemente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Adaugă umbră pentru un efect vizual plăcut */
 }
 
 .header-top {
@@ -57,10 +61,6 @@ header {
 
 .logo-container a:hover {
   text-decoration: none;
-}
-label a {
-  color: #ffa656; /* Schimbă culoarea textului la galben */
-  text-decoration: none; /* Elimină sublinierea */
 }
 
 /* ===== NAVIGAȚIE ===== */
@@ -323,4 +323,19 @@ footer strong {
 
 .search-submit {
   display: none;
+}
+
+/* Efectul de estompare la intrare */
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* Efectul de estompare la ieșire */
+body.fade-out {
+  opacity: 0;
 }

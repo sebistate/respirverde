@@ -54,20 +54,14 @@
   </section>
 
   <section class="doneaza">
-    <h2>Cum poți ajuta</h2>
     <div class="grid">
       <div class="card">
         <h3>Donează Online</h3>
         <p>Fă o donație rapidă prin PayPal și susține proiectele noastre de ecologizare, plantare de copaci și reciclare.</p>
-        <a href="https://www.paypal.me/statesebastian" class="btn" target="_blank" rel="noopener">
+        <a href="https://www.paypal.me/" class="btn" target="_blank" rel="noopener">
           Donează Acum
         </a>
       </div>
-      <div class="card">
-        <h3>Sprijină Prin Alte Mijloace</h3>
-        <p>Poți dona direct la evenimentele noastre de ecologizare sau plantare de copaci. Urmărește-ne pe rețelele sociale pentru detalii.</p>
-      </div>
-    </div>
   </section>
 
    <!-- URMĂREȘTE-NE -->
@@ -146,6 +140,38 @@
       });
     });
   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // La încărcare, fă fade-in
+    document.body.classList.add('fade-in');
+    
+    // Ascultă clicul pe linkuri interne pentru a face fade-out
+    document.querySelectorAll("a[href]").forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Ignoră linkurile externe, anchor (#) și cele cu target="_blank"
+      if (
+        href.startsWith("http") || 
+        href.startsWith("#") || 
+        link.getAttribute("target") === "_blank"
+      ) return;
+
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const destination = this.href;
+
+        document.body.classList.remove('fade-in'); // Oprește fade-in înainte de a aplica fade-out
+        document.body.classList.add('fade-out');
+
+        // După 500ms (durata animației), navighează la pagina dorită
+        setTimeout(() => {
+          window.location.href = destination;
+        }, 500); // aceeași durată ca în CSS
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
